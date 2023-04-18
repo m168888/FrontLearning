@@ -122,6 +122,14 @@
         git的标准流程是工作区->暂存区->git仓库，但有时这么做有点繁琐，通过 git commit -a指令可以直接将工作区的文件提交到git仓库中。
         从而省略了git add 的操作。
         git commit -a -m "描述信息"
+
+        从git仓库中移除文件的方式有两种：
+            1. 从git仓库中和工作区中同时移除文件
+                git rm -f index.js
+            2.只从git仓库中移除指定的文件，但保留对应的文件
+                git rm --cached index.js
+
+        对与不需要提交管理的文件，可以通过创建一个名为.gitignore的配置文件，列出需要忽略的文件匹配模式。
      -->
 </body>
 </html>
